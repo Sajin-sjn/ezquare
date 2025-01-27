@@ -1,0 +1,113 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 4rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, gap 0.3s ease; /* Added gap transition */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+  
+  .get-in-touch {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 4rem;
+  }
+  
+  .get-in-touch:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Responsive design for mobile screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      opacity: 0;
+      transform: translateY(-100%);
+      gap: 1rem; /* Default gap for mobile */
+    }
+  
+    .nav-links.active {
+      opacity: 1;
+      transform: translateY(0);
+      gap: 0.5rem; /* Reduced gap when menu is open */
+    }
+  
+    .nav-links li {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .get-in-touch {
+      display: none;
+    }
+  
+    /* Hamburger icon */
+    .navbar .menu-icon {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+      z-index: 9999;
+      margin-right: 0rem;
+      transition: transform 0.3s ease; /* Added transition for smooth rotation */
+    }
+  
+    /* Rotate the icon when the menu is open */
+    .navbar .menu-icon.rotated {
+      transform: rotate(180deg);
+    }
+  }
+  
+  /* By default, hide the menu icon on large screens */
+  .menu-icon {
+    display: none;
+  }
+  
