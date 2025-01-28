@@ -1,28 +1,31 @@
 import React from 'react';
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import './Hero.css'; // Assuming you're using custom CSS for additional styles
+import './Hero.css'; 
+import HeroImg from '../../assets/Hero-img.png';
 
 const Hero = () => {
   return (
     <div className='hero'>
-      <Container>
-        <Row className="align-items-center">
-          {/* First Column */}
-          <Col xs={12} md={6}>
-            <h2>Your Vision.<br />Your Code.</h2>
-            <p>
-              We build high-quality websites and web applications that help businesses thrive.
-            </p>
-            <Button variant="primary" size="lg" className="get-in-touch-button">
-              Get in Touch
-            </Button>
-            <p className="collaborate-text">Collaborate with our team</p>
+      <Container className="p-0">
+        <Row className="align-items-center mt-0 mb-0">
+          {/* First Column (Text and Button) */}
+          <Col xs={12} md={6} className="order-md-1 order-2">
+            <div className="hero-content mx-auto">
+              <h2 className="mb-3">Your Vision.<br />Your Code.</h2>
+              <p className="mb-3 hero-description">
+                We build high-quality websites and web applications that help businesses thrive.
+              </p>
+              <Button size="lg" className="get-in-touch-button w-100 get-in-touch">
+                Get in Touch
+              </Button>
+              <p className="collaborate-text">Collaborate with our team</p> {/* Adjusted margin */}
+            </div>
           </Col>
 
           {/* Second Column (Image) */}
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} className="order-md-2 order-1">
             <img 
-              src="https://via.placeholder.com/500"  // Replace with your image URL
+              src={HeroImg}
               alt="Hero Image"
               className="hero-image"
             />

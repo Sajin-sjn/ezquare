@@ -1,31 +1,93 @@
+/* Hero Section */
 .hero {
-    background-color: #f5f5f5;
-    padding: 50px 0;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 490px; /* Ensure content doesn't stretch too wide */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+.hero h2 {
+  font-size: 3rem; /* Larger heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.hero .hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.get-in-touch-button {
+  width: 100%; /* Full width for button */
+  /* margin-bottom: 20px; */
+}
+
+.collaborate-text {
+  font-size: 10px;
+  color: #777; 
+  margin-top: 0; 
+  padding-top: 5px; 
+  text-align: center; 
+}
+
+/* Image Styles */
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .hero {
+    padding-top: 50px; /* Adjust padding for better spacing */
   }
-  
+
   .hero h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Adjust heading size for mid-range screens */
   }
-  
+
   .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
+    font-size: 1.125rem; /* Adjust paragraph size for better readability */
   }
-  
-  .get-in-touch-button {
-    margin-bottom: 20px;
-  }
-  
+
   .collaborate-text {
-    font-size: 1rem;
-    color: #777;
+    font-size: 0.9rem; /* Slightly smaller font for better spacing */
   }
-  
+
+  /* Ensure columns behave as expected */
+  .hero-content {
+    max-width: 500px; /* Prevent overcrowding */
+  }
+
+  /* Ensure image takes appropriate space */
   .hero-image {
-    width: 100%;
-    border-radius: 8px;
-    max-width: 100%;
+    width: 90%; /* Make image slightly smaller on medium screens */
   }
-  
+}
+
+/* Additional Styling Adjustments */
+@media (max-width: 590px) {
+  .hero h2 {
+    font-size: 2rem; /* Slightly smaller font size on smaller screens */
+  }
+  .hero-content {
+    padding-inline: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph size for better readability */
+  }
+
+  .collaborate-text {
+    font-size: 0.9rem; /* Slightly smaller font for smaller screens */
+  }
+}
